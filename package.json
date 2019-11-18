@@ -32,6 +32,7 @@
     ]
   },
   "scripts": {
-    "build": "jsonnet ./themes/theme.jsonnet > ./themes/theme.json"
+    "build": "jsonnet ./themes/theme.jsonnet > ./themes/theme.json",
+    "package": "vsce package --out enough-visual-studio-code.vsix"
   }
 }
