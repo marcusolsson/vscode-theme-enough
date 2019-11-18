@@ -1,43 +1,43 @@
 {
-	"name": "enough-visual-studio-code",
-	"displayName": "Enough",
-	"description": "A minimal theme for VS Code",
-	"version": "0.1.0",
-	"publisher": "marcusolsson",
-	"author": {
-		"name": "Marcus Olsson",
-		"url": "https://marcus.se.net"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/marcusolsson/vscode-theme-enough"
-	},
-	"bugs": {
-		"url": "https://github.com/marcusolsson/vscode-theme-enough/issues"
-	},
-	"license": "MIT",
-	"engines": {
-		"vscode": "^1.40.0"
-	},
-	"categories": [
-		"Themes"
-	],
-	"contributes": {
-		"themes": [
-			{
-				"label": "Enough",
-				"uiTheme": "vs-dark",
-				"path": "./themes/theme.json"
-			}
-		]
-	},
-	"scripts": {
-		"build": "jsonnet ./themes/theme.jsonnet > ./themes/theme.json",
-		"package": "vsce package --out enough-visual-studio-code.vsix"
-	},
-	"__metadata": {
-		"id": "47720507-56bf-48b2-a674-61794496c318",
-		"publisherDisplayName": "Marcus Olsson",
-		"publisherId": "61431fac-ca68-4cf6-ab6b-1f7655297e58"
-	}
+  "name": "enough-visual-studio-code",
+  "displayName": "Enough",
+  "description": "A minimal theme for VS Code",
+  "version": "0.1.1",
+  "publisher": "marcusolsson",
+  "author": {
+    "name": "Marcus Olsson",
+    "url": "https://marcus.se.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcusolsson/vscode-theme-enough"
+  },
+  "bugs": {
+    "url": "https://github.com/marcusolsson/vscode-theme-enough/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Enough",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "jsonnet ./themes/theme.jsonnet > ./themes/theme.json",
+    "package": "vsce package --out enough-visual-studio-code.vsix"
+  },
+  "__metadata": {
+    "id": "47720507-56bf-48b2-a674-61794496c318",
+    "publisherDisplayName": "Marcus Olsson",
+    "publisherId": "61431fac-ca68-4cf6-ab6b-1f7655297e58"
+  }
 }
