@@ -1,0 +1,21 @@
+{
+  "name": "enough",
+  "displayName": "Enough",
+  "description": "A minimal theme for VS Code",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Enough",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme.json"
+      }
+    ]
+  }
+}
