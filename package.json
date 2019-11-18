@@ -1,8 +1,21 @@
 {
-  "name": "enough",
+  "name": "enough-visual-studio-code",
   "displayName": "Enough",
   "description": "A minimal theme for VS Code",
   "version": "0.1.0",
+  "publisher": "marcusolsson",
+  "author": {
+    "name": "Marcus Olsson",
+    "url": "https://marcus.se.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcusolsson/vscode-theme-enough"
+  },
+  "bugs": {
+    "url": "https://github.com/marcusolsson/vscode-theme-enough/issues"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.40.0"
   },
@@ -17,5 +30,8 @@
         "path": "./themes/theme.json"
       }
     ]
+  },
+  "scripts": {
+    "build": "jsonnet ./themes/theme.jsonnet > ./themes/theme.json"
   }
 }
