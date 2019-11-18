@@ -1,4 +1,4 @@
-local title = 'Miniml';
+local title = 'Enough';
 
 // Apple
 local apple_light_gray_1 = '#8E8E93';
