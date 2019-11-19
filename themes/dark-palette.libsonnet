@@ -1,16 +1,4 @@
 // Colors
-
-local elevation00dp = '#121212';
-local elevation01dp = '#1e1e1e';  // 5% = 13
-local elevation02dp = '#222222';  // 7% = 18
-local elevation03dp = '#242424';  // 8% = 20
-local elevation04dp = '#272727';  // 9% = 23
-local elevation06dp = '#2c2c2c';  // 11% = 28
-local elevation08dp = '#2d2d2d';  // 12% = 31
-local elevation12dp = '#323232';  // 14% = 36
-local elevation16dp = '#353535';  //  15% = 38
-local elevation24dp = '#383838';  // 16% = 41
-
 local light_gray_0 = '#f2f2f7';
 
 local dark_gray_0 = '#1c1c1c';  // Background
