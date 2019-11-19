@@ -1,228 +1,230 @@
+local palette = import 'dark-palette.libsonnet';
 local title = 'Enough';
-
-// Apple
-local apple_light_gray_1 = '#8E8E93';
-local apple_light_gray_2 = '#AEAEB2';
-local apple_light_gray_3 = '#C7C7CC';
-local apple_light_gray_4 = '#D1D1D6';
-local apple_light_gray_5 = '#E5E5EA';
-local apple_light_gray_6 = '#F2F2F7';
-
-local apple_light_blue = '#007AFF';
-local apple_light_red = '#FF3B30';
-local apple_light_green = '#34C759';
-local apple_light_teal = '#5AC8FA';
-local apple_light_pink = '#FF2D55';
-local apple_light_yellow = '#FFCC00';
-
-local apple_dark_gray_1 = '#8E8E93';
-local apple_dark_gray_2 = '#636366';
-local apple_dark_gray_3 = '#48484A';
-local apple_dark_gray_4 = '#3A3A3C';
-local apple_dark_gray_5 = '#2C2C2E';
-local apple_dark_gray_6 = '#1C1C1E';
-
-local apple_dark_blue = '#0084FF';
-local apple_dark_red = '#FF453A';
-local apple_dark_green = '#30D158';
-local apple_dark_teal = '#64D2FF';
-local apple_dark_pink = '#FF375F';
-local apple_dark_yellow = '#FFD60A';
-
-// Color aliases
-local light_blue = apple_dark_blue;
-local light_cyan = apple_dark_teal;
-local light_green = apple_dark_green;
-local light_magenta = apple_dark_pink;
-local light_red = apple_dark_red;
-local light_yellow = apple_dark_yellow;
-local dark_blue = apple_light_blue;
-local dark_cyan = apple_light_teal;
-local dark_green = apple_light_green;
-local dark_magenta = apple_light_pink;
-local dark_red = apple_light_red;
-local dark_yellow = apple_light_yellow;
-
-// Translucency
-local high_emphasis = 'de';
-local medium_emphasis = '99';
-local low_emphasis = '61';
-
-// UI elements
-local ui_background = apple_dark_gray_6;
-local ui_01 = apple_dark_gray_5;  // Container background on ui_background.
-local ui_02 = apple_dark_gray_3;  // Container background on ui_01.
-local ui_03 = apple_dark_gray_2;  //  Subtle border.
-local ui_hover = apple_dark_gray_4;
-local ui_shadow = '#000000' + low_emphasis;
-
-local text_1 = apple_light_gray_6 + high_emphasis;  // Primary text
-local text_2 = apple_light_gray_6 + medium_emphasis;  // Secondary text
-local text_3 = apple_light_gray_6 + low_emphasis;  // Placeholder text
-
-local overlay_1 = apple_dark_gray_3 + high_emphasis;
-local overlay_2 = apple_dark_gray_3 + medium_emphasis;
-local overlay_3 = apple_dark_gray_3 + low_emphasis;
-
-
-// Support colors
-local success = light_green;
-local danger = light_red;
-local warning = light_yellow;
-local information = light_blue;
-
-local inverse_success = dark_green;
-local inverse_danger = dark_red;
-local inverse_warning = dark_yellow;
-local inverse_information = dark_blue;
-
-local success_background = dark_green + low_emphasis;
-local danger_background = dark_red + low_emphasis;
-
-// Git colors
-local added = success;
-local modified = information;
-local deleted = danger;
-local untracked = light_magenta;
 
 {
   name: title,
   type: 'dark',
   colors: {
-    'activityBar.activeBorder': ui_03,
-    'activityBar.background': ui_background,
-    'activityBar.dropBackground': ui_02,
-    'activityBar.foreground': text_1,
-    'activityBarBadge.background': ui_02,
-    'activityBarBadge.foreground': text_2,
-    'button.background': ui_01,
-    'button.foreground': text_1,
-    'button.hoverBackground': ui_hover,
-    'diffEditor.insertedTextBackground': success_background,
-    'diffEditor.removedTextBackground': danger_background,
-    'editor.background': ui_background,
-    'editor.findMatchBackground': ui_03,
-    'editor.findMatchBorder': ui_03,
-    'editor.findMatchHighlightBackground': ui_02,
-    'editor.findMatchHighlightBorder': ui_02,
-    'editor.foreground': text_1,
-    'editor.selectionBackground': ui_01,
-    'editorCursor.background': ui_background,
-    'editorCursor.foreground': text_1,
-    'editorError.foreground': danger,
-    'editorWarning.foreground': warning,
-    'editorGroup.border': ui_03,
-    'editorGroupHeader.tabsBackground': ui_background,
-    'editorGutter.background': ui_background,
-    'editorGutter.addedBackground': success,
-    'editorGutter.deletedBackground': danger,
-    'editorGutter.modifiedBackground': information,
-    'editorIndentGuide.activeBackground': ui_02,
-    'editorIndentGuide.background': ui_01,
-    'editorLineNumber.foreground': ui_02,
-    'editorOverviewRuler.addedForeground': success,
-    'editorOverviewRuler.deletedForeground': danger,
-    'editorOverviewRuler.errorForeground': danger,
-    'editorOverviewRuler.infoForeground': information,
-    'editorOverviewRuler.warningForeground': warning,
-    'editorRuler.foreground': ui_01,
-    'editorWidget.background': ui_background,
-    'editorWidget.foreground': text_1,
-    errorForeground: danger,
-    'extensionButton.prominentBackground': dark_green,
-    'extensionButton.prominentForeground': text_1,
-    'extensionButton.prominentHoverBackground': light_green,
-    focusBorder: ui_03,
-    'gitDecoration.addedResourceForeground': added + medium_emphasis,
-    'gitDecoration.deletedResourceForeground': deleted + medium_emphasis,
-    'gitDecoration.modifiedResourceForeground': modified + medium_emphasis,
-    'gitDecoration.untrackedResourceForeground': untracked + medium_emphasis,
-    'icon.foreground': text_1,
-    'input.background': ui_01,
-    'input.border': ui_01,
-    'input.foreground': text_1,
-    'input.placeholderForeground': ui_02,
-    'inputOption.activeBackground': ui_02,
-    'inputOption.activeBorder': ui_02,
-    'inputValidation.errorBackground': inverse_danger,
-    'inputValidation.errorBorder': danger,
-    'inputValidation.errorForeground': text_1,
-    'inputValidation.infoBackground': inverse_information,
-    'inputValidation.infoBorder': information,
-    'inputValidation.infoForeground': text_1,
-    'inputValidation.warningBackground': inverse_warning,
-    'inputValidation.warningBorder': warning,
-    'inputValidation.warningForeground': text_1,
-    'list.activeSelectionBackground': ui_01,
-    'list.activeSelectionForeground': text_1,
-    'list.errorForeground': danger,
-    'list.warningForeground': warning,
-    'list.filterMatchBackground': ui_03,
-    'list.filterMatchBorder': ui_03,
-    'list.invalidItemForeground': danger,
-    'list.focusBackground': ui_01,
-    'list.focusForeground': text_1,
-    'list.highlightForeground': text_2,
-    'list.hoverBackground': ui_hover,
-    'list.hoverForeground': text_1,
-    'list.inactiveSelectionBackground': ui_01,
-    'list.inactiveSelectionForeground': text_1,
-    'listFilterWidget.background': inverse_information,
-    'listFilterWidget.noMatchesOutline': information,
-    'listFilterWidget.outline': information,
-    'panel.background': ui_background,
-    'panel.border': ui_02,
-    'panelTitle.activeForeground': text_1,
-    'panelTitle.inactiveForeground': ui_03,
-    'scrollbarSlider.activeBackground': overlay_3,
-    'scrollbarSlider.background': overlay_1,
-    'scrollbarSlider.hoverBackground': overlay_2,
-    'selection.background': text_1,
-    'sideBar.background': ui_background,
-    'sideBar.border': ui_02,
-    'sideBar.foreground': text_2,
-    'sideBarSectionHeader.background': ui_background,
-    'sideBarSectionHeader.foreground': text_1,
-    'sideBarTitle.foreground': ui_02,
-    'statusBar.background': ui_01,
-    'statusBar.foreground': text_1,
-    'tab.activeBackground': ui_01,
-    'tab.activeForeground': text_1,
-    'tab.border': ui_background,
-    'tab.hoverBackground': ui_hover,
-    'tab.inactiveBackground': ui_background,
-    'tab.inactiveForeground': text_3,
-    'terminal.ansiBlack': ui_background,
-    'terminal.ansiBlue': light_blue,
-    'terminal.ansiBrightBlack': ui_background,
-    'terminal.ansiBrightBlue': light_blue,
-    'terminal.ansiBrightCyan': light_cyan,
-    'terminal.ansiBrightGreen': light_green,
-    'terminal.ansiBrightMagenta': light_magenta,
-    'terminal.ansiBrightRed': light_red,
-    'terminal.ansiBrightWhite': text_1,
-    'terminal.ansiBrightYellow': light_yellow,
-    'terminal.ansiCyan': light_cyan,
-    'terminal.ansiGreen': light_green,
-    'terminal.ansiMagenta': light_magenta,
-    'terminal.ansiRed': light_red,
-    'terminal.ansiWhite': text_1,
-    'terminal.ansiYellow': light_yellow,
-    'widget.shadow': ui_shadow,
+    // Base colors
+    focusBorder: palette.ui.elements[1],
+    foreground: palette.text[0],
+    'widget.shadow': palette.ui.shadow,
+    'selection.background': palette.text[0],
+    errorForeground: palette.support.danger.foreground,
+    'icon.foreground': palette.text[0],
+
+    // Text colors
+    'textLink.activeForeground': palette.support.information.foreground,
+    'textLink.foreground': palette.support.information.foreground,
+
+    // Button control
+    'button.background': palette.ui.elements[0],
+    'button.foreground': palette.text[0],
+    'button.hoverBackground': palette.ui.hover,
+
+    // Dropdown control
+    'dropdown.foreground': self.foreground,
+    'dropdown.background': palette.ui.elements[0],
+    'dropdown.border': self['dropdown.background'],
+    'dropdown.listBackground': self['dropdown.background'],
+
+    // Input control
+    'input.background': palette.ui.elements[0],
+    'input.border': self['input.background'],
+    'input.foreground': palette.text[0],
+    'input.placeholderForeground': palette.text[2],
+    'inputOption.activeBackground': palette.ui.elements[1],
+    'inputOption.activeBorder': self['inputOption.activeBackground'],
+    'inputValidation.errorBackground': palette.support.danger.foreground,
+    'inputValidation.errorBorder': self['inputValidation.errorBackground'],
+    'inputValidation.errorForeground': self.foreground,
+    'inputValidation.infoBackground': palette.support.information.foreground,
+    'inputValidation.infoBorder': self['inputValidation.infoBackground'],
+    'inputValidation.infoForeground': self.foreground,
+    'inputValidation.warningBackground': palette.support.warning.foreground,
+    'inputValidation.warningBorder': self['inputValidation.warningBackground'],
+    'inputValidation.warningForeground': self.foreground,
+
+    // Scrollbar control
+    'scrollbar.shadow': self['widget.shadow'],
+    'scrollbarSlider.activeBackground': palette.ui.overlay[2],
+    'scrollbarSlider.background': palette.ui.overlay[0],
+    'scrollbarSlider.hoverBackground': palette.ui.overlay[1],
+
+    // Badge
+    'badge.background': palette.ui.elements[1],
+    'badge.foreground': self.foreground,
+
+    // Lists and trees
+    'list.activeSelectionBackground': palette.ui.elements[0],
+    'list.activeSelectionForeground': palette.text[0],
+    'list.errorForeground': palette.support.danger.foreground,
+    'list.warningForeground': palette.support.warning.foreground,
+    'list.filterMatchBackground': palette.ui.elements[2],
+    'list.filterMatchBorder': self['list.filterMatchBackground'],
+    'list.invalidItemForeground': palette.support.danger.foreground,
+    'list.focusBackground': palette.ui.elements[0],
+    'list.focusForeground': palette.text[0],
+    'list.highlightForeground': palette.text[1],
+    'list.hoverBackground': palette.ui.hover,
+    'list.hoverForeground': palette.text[0],
+    'list.inactiveSelectionBackground': palette.ui.elements[0],
+    'list.inactiveSelectionForeground': palette.text[0],
+    'listFilterWidget.background': palette.support.information.foreground,
+    'listFilterWidget.outline': palette.support.information.foreground,
+    'listFilterWidget.noMatchesOutline': self['listFilterWidget.outline'],
+
+    // Activity bar
+    'activityBar.activeBorder': palette.text[0],
+    'activityBar.background': palette.ui.background,
+    'activityBar.dropBackground': palette.ui.elements[1],
+    'activityBar.foreground': palette.text[0],
+    'activityBarBadge.background': palette.ui.elements[1],
+    'activityBarBadge.foreground': palette.text[1],
+
+    // Side Bar
+    'sideBar.background': palette.ui.background,
+    'sideBar.border': palette.ui.elements[1],
+    'sideBar.foreground': palette.text[1],
+    'sideBarSectionHeader.background': palette.ui.background,
+    'sideBarSectionHeader.foreground': palette.text[0],
+    'sideBarTitle.foreground': palette.ui.elements[1],
+
+    // Editor Groups & Tabs
+    'editorGroup.border': palette.ui.elements[2],
+    'editorGroupHeader.tabsBackground': palette.ui.background,
+    'tab.activeBackground': palette.ui.elements[0],
+    'tab.activeForeground': palette.text[0],
+    'tab.border': palette.ui.background,
+    'tab.hoverBackground': palette.ui.hover,
+    'tab.inactiveBackground': palette.ui.background,
+    'tab.inactiveForeground': palette.text[2],
+
+    // Editor colors
+    'editor.background': palette.ui.background,
+    'editor.foreground': palette.text[0],
+    'editorLineNumber.foreground': palette.ui.elements[1],
+    'editorCursor.background': palette.ui.background,
+    'editorCursor.foreground': palette.text[0],
+    'editor.selectionBackground': palette.ui.elements[0],
+    'editor.findMatchBackground': palette.ui.elements[2],
+    'editor.findMatchBorder': self['editor.findMatchBackground'],
+    'editor.findMatchHighlightBackground': palette.ui.elements[1],
+    'editor.findMatchHighlightBorder': self['editor.findMatchHighlightBackground'],
+    'editor.lineHighlightBackground': palette.ui.overlay[2],
+    'editorLink.activeForeground': palette.support.information.foreground,
+    'editorIndentGuide.activeBackground': palette.ui.elements[1],
+    'editorIndentGuide.background': palette.ui.elements[0],
+    'editorRuler.foreground': palette.ui.elements[0],
+
+    'editorOverviewRuler.findMatchForeground': palette.ui.overlay[2],
+    'editorOverviewRuler.rangeHighlightForeground': self['editorOverviewRuler.findMatchForeground'],
+    'editorOverviewRuler.selectionHighlightForeground': self['editorOverviewRuler.findMatchForeground'],
+    'editorOverviewRuler.wordHighlightForeground': self['editorOverviewRuler.findMatchForeground'],
+    'editorOverviewRuler.wordHighlightStrongForeground': self['editorOverviewRuler.findMatchForeground'],
+    'editorOverviewRuler.addedForeground': palette.vcs.added,
+    'editorOverviewRuler.modifiedForeground': palette.vcs.modified,
+    'editorOverviewRuler.deletedForeground': palette.vcs.deleted,
+    'editorOverviewRuler.infoForeground': palette.support.information.foreground,
+    'editorOverviewRuler.warningForeground': palette.support.warning.foreground,
+    'editorOverviewRuler.errorForeground': palette.support.danger.foreground,
+
+    'editorError.foreground': palette.support.danger.foreground,
+    'editorWarning.foreground': palette.support.warning.foreground,
+    'editorInfo.foreground': palette.support.information.foreground,
+
+    'editorGutter.background': palette.ui.background,
+    'editorGutter.addedBackground': palette.vcs.added,
+    'editorGutter.deletedBackground': palette.vcs.deleted,
+    'editorGutter.modifiedBackground': palette.vcs.modified,
+
+    // Diff editor colors
+    'diffEditor.insertedTextBackground': palette.support.success.background,
+    'diffEditor.removedTextBackground': palette.support.danger.background,
+
+    // Editor widget colors
+    'editorWidget.background': palette.ui.background,
+    'editorWidget.border': self['editorWidget.background'],
+    'editorWidget.foreground': self.foreground,
+    'editorWidget.resizeBorder': palette.ui.elements[1],
+    'editorSuggestWidget.background': palette.ui.elements[0],
+    'editorSuggestWidget.border': self['editorSuggestWidget.background'],
+    'editorSuggestWidget.foreground': self.foreground,
+    'editorSuggestWidget.highlightForeground': palette.ui.elements[1],
+    'editorSuggestWidget.selectedBackground': palette.ui.elements[2],
+    'editorHoverWidget.background': palette.ui.elements[0],
+    'editorHoverWidget.border': self['editorHoverWidget.background'],
+    'debugExceptionWidget.background': palette.ui.elements[0],
+    'debugExceptionWidget.border': self['debugExceptionWidget.background'],
+
+    // Panel colors
+    'panel.background': palette.ui.background,
+    'panel.border': palette.ui.elements[1],
+    'panelTitle.activeForeground': palette.text[0],
+    'panelTitle.inactiveForeground': palette.ui.elements[2],
+
+    // Status Bar colors
+    'statusBar.background': palette.ui.elements[0],
+    'statusBar.foreground': palette.text[0],
+    'statusBar.border': self['statusBar.background'],
+    'statusBar.debuggingBackground': self['statusBar.background'],
+    'statusBar.debuggingForeground': self['statusBar.foreground'],
+    'statusBar.debuggingBorder': palette.support.warning.foreground,
+    'statusBar.noFolderBackground': self['statusBar.background'],
+    'statusBar.noFolderForeground': self['statusBar.foreground'],
+    'statusBar.noFolderBorder': self['statusBar.background'],
+
+    // Extensions
+    'extensionButton.prominentBackground': palette.support.success.background,
+    'extensionButton.prominentForeground': palette.text[0],
+    'extensionButton.prominentHoverBackground': palette.support.success.foreground,
+
+    // Integrated Terminal colors
+    'terminal.ansiBlack': palette.ui.background,
+    'terminal.ansiBlue': palette.ansi.blue,
+    'terminal.ansiCyan': palette.ansi.cyan,
+    'terminal.ansiGreen': palette.ansi.green,
+    'terminal.ansiMagenta': palette.ansi.magenta,
+    'terminal.ansiRed': palette.ansi.red,
+    'terminal.ansiWhite': palette.text[0],
+    'terminal.ansiYellow': palette.ansi.yellow,
+    'terminal.ansiBrightBlack': self['terminal.ansiBlack'],
+    'terminal.ansiBrightBlue': self['terminal.ansiBlue'],
+    'terminal.ansiBrightCyan': self['terminal.ansiCyan'],
+    'terminal.ansiBrightGreen': self['terminal.ansiGreen'],
+    'terminal.ansiBrightMagenta': self['terminal.ansiMagenta'],
+    'terminal.ansiBrightRed': self['terminal.ansiRed'],
+    'terminal.ansiBrightWhite': self['terminal.ansiWhite'],
+    'terminal.ansiBrightYellow': self['terminal.ansiYellow'],
+
+    // Debug
+    'debugToolBar.background': palette.ui.elements[0],
+    'debugToolBar.border': self['debugToolBar.background'],
+
+    // Git colors
+    'gitDecoration.deletedResourceForeground': palette.vcs.deleted,
+    'gitDecoration.modifiedResourceForeground': palette.vcs.modified,
+    'gitDecoration.untrackedResourceForeground': palette.vcs.untracked,
+
+    // Breadcrumbs
+    'breadcrumb.foreground': palette.text[2],
+    'breadcrumb.focusForeground': palette.text[1],
+    'breadcrumb.activeSelectionForeground': self.foreground,
+    'breadcrumbPicker.background': palette.ui.background,
   },
   tokenColors: [
     {
-      name: 'Comment',
+      name: 'Comments',
       scope: ['comment', 'punctuation.definition.comment'],
       settings: {
-        foreground: ui_02,
+        foreground: palette.text[3],
       },
     },
     {
       name: 'Strings',
       scope: ['string'],
       settings: {
-        foreground: text_3,
+        foreground: palette.text[2],
       },
     },
     {
@@ -233,7 +235,7 @@ local untracked = light_magenta;
         'markup.fenced_code.block.markdown',
       ],
       settings: {
-        foreground: ui_03,
+        foreground: palette.text[3],
       },
     },
   ],
