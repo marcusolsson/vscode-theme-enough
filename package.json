@@ -2,13 +2,13 @@
   "name": "enough-visual-studio-code",
   "displayName": "Enough",
   "description": "A minimal theme for VS Code",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publisher": "marcusolsson",
   "author": {
     "name": "Marcus Olsson",
     "url": "https://marcus.se.net"
   },
-  "icon": "assets/logo.png",
+  "icon": "assets/logo-round.png",
   "galleryBanner": {
     "color": "#2C2C2C",
     "theme": "dark"
