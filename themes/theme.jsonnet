@@ -13,6 +13,10 @@ local title = 'Enough';
     errorForeground: palette.support.danger.foreground,
     'icon.foreground': palette.text[0],
 
+    // Window border
+    'window.activeBorder': palette.ui.background,
+    'window.inactiveBorder': palette.ui.background,
+
     // Text colors
     'textLink.activeForeground': palette.support.information.foreground,
     'textLink.foreground': palette.support.information.foreground,
@@ -90,8 +94,13 @@ local title = 'Enough';
     'sideBarSectionHeader.foreground': palette.text[0],
     'sideBarTitle.foreground': palette.ui.elements[1],
 
+    // Minimap
+    'minimap.findMatchHighlight': palette.support.information.foreground,
+    'minimap.selectionHighlight': self.foreground,
+
     // Editor Groups & Tabs
     'editorGroup.border': palette.ui.elements[2],
+    'editorGroup.dropBackground': palette.ui.elements[1],
     'editorGroupHeader.tabsBackground': palette.ui.background,
     'tab.activeBackground': palette.ui.elements[0],
     'tab.activeForeground': palette.text[0],
@@ -102,16 +111,20 @@ local title = 'Enough';
 
     // Editor colors
     'editor.background': palette.ui.background,
-    'editor.foreground': palette.text[0],
+    'editor.foreground': self.foreground,
     'editorLineNumber.foreground': palette.ui.elements[1],
     'editorCursor.background': palette.ui.background,
-    'editorCursor.foreground': palette.text[0],
-    'editor.selectionBackground': palette.ui.elements[0],
-    'editor.findMatchBackground': palette.ui.elements[2],
+    'editorCursor.foreground': self.foreground,
+    'editor.selectionBackground': palette.ui.elements[2],
+    'editor.selectionHighlightBackground': palette.ui.elements[0],
+    'editor.findMatchBackground': self['editor.selectionBackground'],
+    'editor.findMatchHighlightBackground': self['editor.selectionHighlightBackground'],
+    'editor.findRangeHighlightBackground': self['editor.selectionHighlightBackground'],
     'editor.findMatchBorder': self['editor.findMatchBackground'],
-    'editor.findMatchHighlightBackground': palette.ui.elements[1],
     'editor.findMatchHighlightBorder': self['editor.findMatchHighlightBackground'],
+    'editor.findRangeHighlightBorder': self['editor.findRangeHighlightBackground'],
     'editor.lineHighlightBackground': palette.ui.overlay[2],
+    'editor.hoverHighlightBackground': palette.ui.overlay[1],
     'editorLink.activeForeground': palette.support.information.foreground,
     'editorIndentGuide.activeBackground': palette.ui.elements[1],
     'editorIndentGuide.background': palette.ui.elements[0],
