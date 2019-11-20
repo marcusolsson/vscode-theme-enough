@@ -203,6 +203,15 @@
          "settings": {
             "foreground": "#f2f2f73b"
          }
+      },
+      {
+         "name": "JSON - Property names",
+         "scope": [
+            "support.type.property-name.json"
+         ],
+         "settings": {
+            "foreground": "#f2f2f7de"
+         }
       }
    ],
    "type": "dark"

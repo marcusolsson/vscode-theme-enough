@@ -251,5 +251,12 @@ local title = 'Enough';
         foreground: palette.text[3],
       },
     },
+    {
+      name: 'JSON - Property names',
+      scope: ['support.type.property-name.json'],
+      settings: {
+        foreground: palette.text[0],
+      },
+    },
   ],
 }
