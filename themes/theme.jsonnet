@@ -18,9 +18,9 @@ local title = 'Enough';
     'textLink.foreground': palette.support.information.foreground,
 
     // Button control
-    'button.background': palette.ui.elements[0],
-    'button.foreground': palette.text[0],
-    'button.hoverBackground': palette.ui.hover,
+    'button.background': palette.text[1],
+    'button.foreground': palette.ui.background,
+    'button.hoverBackground': palette.text[0],
 
     // Dropdown control
     'dropdown.foreground': self.foreground,
@@ -175,9 +175,9 @@ local title = 'Enough';
     'statusBar.noFolderBorder': self['statusBar.background'],
 
     // Extensions
-    'extensionButton.prominentBackground': palette.support.success.background,
-    'extensionButton.prominentForeground': palette.text[0],
-    'extensionButton.prominentHoverBackground': palette.support.success.foreground,
+    'extensionButton.prominentBackground': self['button.background'],
+    'extensionButton.prominentForeground': self['button.foreground'],
+    'extensionButton.prominentHoverBackground': self['button.hoverBackground'],
 
     // Integrated Terminal colors
     'terminal.ansiBlack': palette.ui.background,
