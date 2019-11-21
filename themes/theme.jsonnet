@@ -157,18 +157,18 @@ local title = 'Enough';
 
     // Editor widget colors
     'editorWidget.background': palette.ui.background,
-    'editorWidget.border': self['editorWidget.background'],
+    'editorWidget.border': palette.ui.elements[2],
     'editorWidget.foreground': self.foreground,
     'editorWidget.resizeBorder': palette.ui.elements[1],
-    'editorSuggestWidget.background': palette.ui.elements[0],
-    'editorSuggestWidget.border': self['editorSuggestWidget.background'],
-    'editorSuggestWidget.foreground': self.foreground,
-    'editorSuggestWidget.highlightForeground': palette.ui.elements[1],
-    'editorSuggestWidget.selectedBackground': palette.ui.elements[2],
-    'editorHoverWidget.background': palette.ui.elements[0],
-    'editorHoverWidget.border': self['editorHoverWidget.background'],
-    'debugExceptionWidget.background': palette.ui.elements[0],
-    'debugExceptionWidget.border': self['debugExceptionWidget.background'],
+    'editorSuggestWidget.background': self['editorWidget.background'],
+    'editorSuggestWidget.border': self['editorWidget.border'],
+    'editorSuggestWidget.foreground': self['editorWidget.foreground'],
+    'editorSuggestWidget.highlightForeground': palette.text[2],
+    'editorSuggestWidget.selectedBackground': palette.ui.elements[1],
+    'editorHoverWidget.background': self['editorWidget.background'],
+    'editorHoverWidget.border': self['editorWidget.border'],
+    'debugExceptionWidget.background': self['editorWidget.background'],
+    'debugExceptionWidget.border': self['editorWidget.border'],
 
     // Panel colors
     'panel.background': palette.ui.background,
