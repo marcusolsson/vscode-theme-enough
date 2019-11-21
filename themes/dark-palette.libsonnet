@@ -6,14 +6,12 @@ local dark_gray_1 = '#272727';  // Containers on background (4dp)
 local dark_gray_2 = '#2E2E2E';  // Background for input controls (8dp)
 local dark_gray_3 = '#353535';  // Subtle border (16dp)
 
-// Material colors
-// https://material.io/design/color/the-color-system.html
-local red = '#E57373';  // Red 300
-local yellow = '#FFD54F';  // Amber 300
-local green = '#AED581';  // Light Green 300
-local cyan = '#4DD0E1';  // Cyan 300
-local blue = '#64B5F6';  // Blue 300
-local magenta = '#F06292';  // Pink 300
+local red = '#CC6666';
+local yellow = '#F0C674';
+local green = '#B5BD68';
+local cyan = '#8ABEB7';
+local blue = '#81A2BE';
+local magenta = '#B294BB';
 
 local white = '#ffffff';
 local black = '#000000';
