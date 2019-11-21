@@ -6,6 +6,7 @@ local dark_gray_1 = '#272727';  // Containers on background (4dp)
 local dark_gray_2 = '#2E2E2E';  // Background for input controls (8dp)
 local dark_gray_3 = '#353535';  // Subtle border (16dp)
 
+// Colors from the Tomorrow Night theme.
 local red = '#CC6666';
 local yellow = '#F0C674';
 local green = '#B5BD68';
