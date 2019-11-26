@@ -92,7 +92,7 @@ local title = 'Enough';
     'sideBar.foreground': palette.text[1],
     'sideBarSectionHeader.background': palette.ui.background,
     'sideBarSectionHeader.foreground': palette.text[0],
-    'sideBarTitle.foreground': palette.ui.elements[1],
+    'sideBarTitle.foreground': palette.text[2],
 
     // Minimap
     'minimap.findMatchHighlight': palette.support.information.foreground,
@@ -174,7 +174,7 @@ local title = 'Enough';
     'panel.background': palette.ui.background,
     'panel.border': palette.ui.elements[1],
     'panelTitle.activeForeground': palette.text[0],
-    'panelTitle.inactiveForeground': palette.ui.elements[2],
+    'panelTitle.inactiveForeground': palette.text[2],
 
     // Status Bar colors
     'statusBar.background': palette.ui.elements[0],
